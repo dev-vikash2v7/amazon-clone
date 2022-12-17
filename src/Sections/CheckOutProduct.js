@@ -1,0 +1,51 @@
+import {Star} from '@material-ui/icons'
+import './styles/CheckOutProduct.css'
+
+import useStateValue from '../StateProvider'
+
+function CheckOutProduct({product}) {
+
+    const [ , dispatch ] = useStateValue();
+
+    function reomve_from_basket(){
+        dispatch(
+            {
+                type:'REMOVE_FROM_BASKET' ,
+                id : product.id 
+            }
+        );
+    }
+
+
+  return (
+    <div className='checkoutProduct'>
+
+    <img src={`images/${    product.imgUrl }`}
+        alt={  `images/${product.imgUrl }`}
+        className='checkoutProduct__image'/>
+        
+    <div className='checkoutProduct__info'>
+
+        <p className='checkoutProduct__title'>
+            {product.title }
+        </p>
+
+        <p className='checkoutProduct__price'>
+            <span>Rs.</span>
+            <span>{product.price}</span>
+        </p>
+
+        <p className='checkoutProduct__rating'>
+            {Array(product.rating).fill().map((e, i) => <Star key={i}/>)} 
+        </p>
+
+    <button className='product__remove_btn' onClick={reomve_from_basket}>Remove from basket</button>
+    </div>
+
+    
+
+</div>
+  )
+}
+
+export default CheckOutProduct
