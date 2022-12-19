@@ -18,9 +18,34 @@ background-color: white;
 
 
 .checkout__items{
+  
     display: flex;
     flex-direction: column;
 }
 
 
+  /* .item {
+    display: inline-block;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 3em;
+    color: #777;
+    font-family: arial;
+    border: 3px solid #777;
+    background-color: #fafafa;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    /* //transition: all .3s; */
+     
+  /* }  */
+/* 
 
+  .selected {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -50px;
+  } */

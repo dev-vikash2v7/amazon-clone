@@ -3,7 +3,8 @@ import './styles/CheckOutProduct.css'
 
 import useStateValue from '../StateProvider'
 
-function CheckOutProduct({product}) {
+
+function CheckOutProduct({product , hideRemove}) {
 
     const [ , dispatch ] = useStateValue();
 
@@ -11,7 +12,8 @@ function CheckOutProduct({product}) {
         dispatch(
             {
                 type:'REMOVE_FROM_BASKET' ,
-                id : product.id 
+                id : product.id ,
+                price : product.price ,
             }
         );
     }
@@ -39,7 +41,8 @@ function CheckOutProduct({product}) {
             {Array(product.rating).fill().map((e, i) => <Star key={i}/>)} 
         </p>
 
-    <button className='product__remove_btn' onClick={reomve_from_basket}>Remove from basket</button>
+{!hideRemove && <button className='product__remove_btn' onClick={reomve_from_basket}>Remove from basket</button>}
+
     </div>
 
     

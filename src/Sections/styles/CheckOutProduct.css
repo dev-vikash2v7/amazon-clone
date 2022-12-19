@@ -3,7 +3,7 @@
     display: flex;
    margin: 20px 0;
    width: 600px;
-   border-bottom: 1px solid rgb(69, 64, 64);
+   /* border-bottom: 1px solid rgb(69, 64, 64); */
 }
 
 .checkoutProduct__info{
@@ -40,3 +40,4 @@
     font-size: large;
     font-weight: 700;
 }
+

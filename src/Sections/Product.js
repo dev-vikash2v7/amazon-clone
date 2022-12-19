@@ -5,14 +5,14 @@ import './styles/Product.css'
 
 function Product({id , title , price , rating ,  imgUrl}) {
 
-  const [{basket} , dispatch] = useStateValue();
+  const [  , dispatch] = useStateValue();
 
-  // console.log('basket => ' , basket)
 
   function add_to_basket(){
     //dispatch the item into the data layer
     dispatch({
       type:'ADD_TO_BASKET' ,
+      
 
       item:{
         id,

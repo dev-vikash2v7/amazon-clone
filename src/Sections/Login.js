@@ -15,7 +15,6 @@ function Login() {
         e.preventDefault();
 
         auth.signInWithEmailAndPassword(email, pwd).then(auth => { // if successfully created a new user with email and password
-            console.log(auth)
             alert('successfully logged in')
 
             if (auth) {
@@ -27,7 +26,6 @@ function Login() {
     function onCreateAccount(e) {
 
         auth.createUserWithEmailAndPassword(email, pwd).then(auth => { // if successfully created a new user with email and password
-            console.log(auth)
             alert('successfully created account')
 
             if (auth) {

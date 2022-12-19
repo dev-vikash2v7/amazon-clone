@@ -2,13 +2,55 @@ import Product from './Product'
 
 import './styles/Home.css'
 
+import {Slide} from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
+
+
+const SlidShow = () => {
+    const slideImages = [
+        {
+            url: 'images/home.jpg',
+        }, {
+            url: 'images/ad.jpg',
+        }, {
+            url: 'images/amazon_logo.png',
+        },
+    ];
+
+
+    return (
+        <Slide> {
+            slideImages.map((slideImage, index) => (
+                <div className="each-slide"
+                    key={index}>
+                    <img
+                    className='home__image'
+                     src={
+                            slideImage.url
+                        }
+                        alt={
+                            slideImage.url
+                        }/>
+                   
+                </div>
+            ))
+        } </Slide>
+    );
+};
+
+
 function Home() {
+
+
     return (
         <div className='home'>
-            <div className='home__container'>
+
+            <div className="slide-container">
+                <SlidShow/>
+            </div>
 
 
-                <img src='images/home.jpg' alt='home' className='home__image'/>
+          <div className='home__container'> 
 
                 <div className='home__row'>
 
@@ -62,8 +104,8 @@ function Home() {
                         imgUrl='power-bank.webp'/>
                 </div>
 
-            </div>
-        </div>
+            </div> 
+            </div> 
     )
 }
 

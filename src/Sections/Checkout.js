@@ -4,14 +4,48 @@ import './styles/Checkout.css'
 import CheckOutProduct from './CheckOutProduct.js'
 
 import useStateValue from '../StateProvider'
-// import {auth} from '../firebase-auth'
+
+import { useState} from 'react';
+import FlipMove from 'react-flip-move';
+
 
 function Checkout() {
+    const [
+        {
+            basket,
+            user
+        }, dispatch
+    ] = useStateValue();
 
-    const [{   basket , user}, ] = useStateValue();
+    const [ selected ,  ] = useState('')
 
-    // console.log(user.email)
 
+    const removeAllFromBasket = () => {
+        basket.map((item) => (dispatch({type: 'EMPTY_BASKET'})))
+    }
+
+
+function AllProducts(){
+    return (
+
+       
+        <FlipMove>
+        {
+        basket?.map((item) => (
+
+            <div className={ item.id === selected ? "item selected" : "item" }
+                key={item.id}>
+
+                <CheckOutProduct     
+                product={item} 
+                />
+
+            </div>
+        ))
+    } 
+            </FlipMove>
+    )
+}
 
 
     return (
@@ -23,19 +57,24 @@ function Checkout() {
                     <img className='checkout__ad' src='images/ad.jpg' alt='ad'/>
                 </Link>
 
-<h3 style={{color : 'blue'}}>Hello {user?.email}</h3>
+                <h3 style={
+                    {color: 'blue'}
+                }>Hello {user?.email}</h3>
 
                 <h1 className='checkout__title'>Your Shoppig Basket
                 </h1>
+                <p> {
+                    basket.length === 0 && 'not items in basket'
+                }</p>
 
-                <div className='checkout__items'>
+                {
+                basket.length > 0 && <button className="checkout_subtitle"
+                    onClick={removeAllFromBasket}>Deselect all items</button>
+            }
 
-                    {
-                    basket.map(product => (
-                        <CheckOutProduct  product = {product}/>
-                    ))
-                } 
-                </div>
+            <div className='checkout__items'>
+<AllProducts/>
+</div>
 
 
             </div>

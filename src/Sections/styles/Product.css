@@ -12,6 +12,13 @@
     background-color: white;
 }
 
+.product:hover{
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+    /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
+    /* box-shadow: rgba(237, 235, 237, 0.4) 5px 5px, rgba(193, 189, 192, 0.3) 10px 10px, rgba(149, 147, 148, 0.2) 15px 15px, rgba(95, 92, 94, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px; */
+/* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
+box-shadow: rgba(0, 0, 0, 0.3) 10px 5px 38px, rgba(0, 0, 0, 0.22) 10px 5px 12px;
+}
 .product__info{
     height: 150px;
     /* margin-bottom: 15px; */

@@ -1,9 +1,9 @@
 .home{
     display: flex;
     justify-content: center;
+    flex-direction: column;
      margin:0 auto ;
    max-width: 1500px;
-    background-color: rgb(228, 219, 219);
 
 }
 
@@ -13,6 +13,12 @@
     margin-bottom: -150px ;
     mask-image : linear-gradient(to bottom , rgba(0, 0, 0, 1.0), rgba(0,0,0,0));
 }
+
+.home__container{
+    background-color: rgb(228, 219, 219);
+
+}
+
 
 .home__row{
 display: flex;
