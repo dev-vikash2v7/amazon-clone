@@ -1,16 +1,13 @@
 import useStateValue from '../StateProvider'
 import CheckOutProduct from './CheckOutProduct';
-
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
-
 import {useEffect, useState} from 'react';
 import CurrencyFormat from 'react-currency-format';
-import axios from '../axios-api';
 
-import {useNavigate} from 'react-router-dom';
-
-import './styles/Payment.css'
-import { db } from '../firebase-auth';
+import axios from '../axios-api'
+import {useNavigate} from 'react-router-dom'
+import './styles/Payment.css' 
+import { db } from '../firebase-auth'
 
 function Payment() {
 
@@ -35,11 +32,11 @@ function Payment() {
         
     ] = useStateValue();
 
-    total+=6979;
 
 
     // handle payment on submit
     const handlePayment = async (e) => {
+
         e.preventDefault();
 
         const cardElement = elements.getElement(CardElement);
@@ -137,11 +134,8 @@ function Payment() {
                 <h3>Delivery Address</h3>
 
                 <div className='payment__address'>
-                    <p>{
-                        user?.email
-                    }</p>
-                    <p>makan 133, ward na07 , kelwa khurd , teh punasa</p>
-                    <p>dist . khandwa , Madhya Pradesh</p>
+                    <p>D15 , Patel Nagar</p>
+                    <p>Bhopal , Madhya Pradesh</p>
                     <p>450114</p>
                 </div>
             </div>
@@ -165,7 +159,7 @@ function Payment() {
 /* useStripe() is a hook that allows a functional component to access the Stripe object.
 useElements() is a hook that allows the developer to access the mounted Elements. */}
 
-            <div className='payment__section'>
+            <div className='payment__section payment_method'>
                 <h3>Payment method</h3>
                 <div className='payment__details'>
                     
@@ -182,11 +176,11 @@ useElements() is a hook that allows the developer to access the mounted Elements
                                         </p>
                                     )
                                 }
-                                decimalScale={0}
+                                decimalScale={2}
                                 value={total}
                                 displayType={'text'}
                                 thousandSeparator={true}
-                                prefix={"Rs"}
+                                prefix={"₹"}
                                 suffix={"/-"}/>
 
                             <button disabled={

@@ -12,7 +12,7 @@ import {useEffect} from 'react';
 
 import {auth} from './firebase-auth.js';
 import useStateValue from './StateProvider.js';
-
+ 
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 
@@ -34,7 +34,7 @@ function App() {
                     user : authUser  ? authUser : null
                 })
             })
-        },[])
+        },[dispatch])
 
 
     return (

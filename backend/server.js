@@ -20,7 +20,7 @@ app.use( (req , res , next) => {
 })
 
 // api routes
-app.get("/", (req, res) =>res.status(200).send("hello from firebase functiions"));
+app.get("/", (req, res) =>res.status(200).send("hello from firebase function"));
 
 
 app.post("/payment/create", async (req, res) =>{

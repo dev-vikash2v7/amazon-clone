@@ -48,6 +48,8 @@ function AllProducts(){
 }
 
 
+
+
     return (
         <div className='checkout'>
 
@@ -63,27 +65,33 @@ function AllProducts(){
 
                 <h1 className='checkout__title'>Your Shoppig Basket
                 </h1>
-                <p> {
-                    basket.length === 0 && 'not items in basket'
-                }</p>
 
                 {
-                basket.length > 0 && <button className="checkout_subtitle"
+                    (basket.length === 0) ?
+                    <div style={{justifyContent:'center',alignItems:'center' , alignSelf:'center' , marginTop:20}}> 
+                <p style={{fontSize:24 , fontWeight:'600' , textAlign:'center'}}>No Items in Your Cart List</p>
+            </div>
+                :
+                
+               <>
+
+             <button className="checkout_subtitle"
                     onClick={removeAllFromBasket}>Deselect all items</button>
-            }
+            
 
             <div className='checkout__items'>
-<AllProducts/>
-</div>
-
-
+            <AllProducts/>
             </div>
 
+
+         
             <div className='checkout__rightside'>
                 <Subtotal/>
             </div>
+            </>
+                }
 
-
+</div>
         </div>
     )
 }

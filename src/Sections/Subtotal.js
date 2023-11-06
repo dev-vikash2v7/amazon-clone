@@ -36,7 +36,7 @@ function Subtotal() {
       value = {total}
       displayType={'text'}
       thousandSeparator={true}
-      prefix = {"$"}
+      prefix = {"₹"}
       suffix = {"/-"}
           />
       

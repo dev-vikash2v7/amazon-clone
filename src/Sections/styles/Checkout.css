@@ -2,7 +2,7 @@
     display: flex;
     padding: 20px;
 background-color: white;
-
+padding-bottom: 40px;
 
 
 }
@@ -23,6 +23,9 @@ background-color: white;
     flex-direction: column;
 }
 
+.checkout__rightside{
+  margin-bottom: 30px;
+}
 
   /* .item {
     display: inline-block;
