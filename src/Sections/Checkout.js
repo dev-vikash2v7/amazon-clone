@@ -76,7 +76,9 @@ function AllProducts(){
                <>
 
              <button className="checkout_subtitle"
-                    onClick={removeAllFromBasket}>Deselect all items</button>
+                    onClick={removeAllFromBasket}>
+                    <span style={{fontWeight:500 , fontSize:'14px'}}>
+                    Deselect all items</span></button>
             
 
             <div className='checkout__items'>

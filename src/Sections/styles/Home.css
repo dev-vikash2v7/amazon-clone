@@ -4,6 +4,7 @@
     flex-direction: column;
      margin:0 auto ;
    max-width: 1500px;
+   padding-bottom: 60px;
 
 }
 
@@ -23,6 +24,6 @@
 .home__row{
 display: flex;
 z-index: 1;
-margin: 0 5px;
+margin: 0 10px;
 
 }

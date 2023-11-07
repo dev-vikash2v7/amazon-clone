@@ -33,6 +33,8 @@ function Payment() {
     ] = useStateValue();
 
 
+    const [  , dispatch] = useStateValue();
+
 
     // handle payment on submit
     const handlePayment = async (e) => {
@@ -68,23 +70,25 @@ function Payment() {
                     .collection('users')
                     .doc(user?.uid)
                     .collection('orders')
-                    .doc(paymentIntent.id)
-                    .set({
+                    .add({
+                        id : paymentIntent.id ,
                         basket:basket ,
                         amount : paymentIntent.amount,
                         created :paymentIntent.created
                     })
+                    .then(doc=>{
+                        console.log('Successfully added with id : ' , doc.id)
+                    })
+                    .catch(err=>{
+                        console.log(err)
+                    })
 
-                    // dispatch({
-                    //     type : 'EMPTY_BASKET'
-                    // })
-
+                    dispatch({
+                        type : 'EMPTY_BASKET'
+                    })
                     alert(`payment status ${paymentIntent.status}`)
-
                     nav('/orders')
-
                 }
-
                 else{
                     alert('payment not confirmed')
                     setProcessing(false);
@@ -183,15 +187,14 @@ useElements() is a hook that allows the developer to access the mounted Elements
                                 prefix={"₹"}
                                 suffix={"/-"}/>
 
-                            <button disabled={
+                            <button  disabled={
                                 processing || disabled || succeeded
-                            }>
-                                <span>{
+                            } style= {{ backgroundColor : processing ?  'gray' : 'lightblue' }}>
+                                <span style={{fontWeight:'500' , color:'#000',fontSize:20}}> {
                                     processing ? "Processing" : "Buy Now"
                                 }</span>
                             </button>
                         </div>
-
 
                         {/*if error of card payment details */}
                         <div className='payment__errors'>

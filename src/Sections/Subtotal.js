@@ -40,7 +40,7 @@ function Subtotal() {
       suffix = {"/-"}
           />
       
-      <button  onClick = { () => nav('/payment') }>Proceed to Checkout</button>
+      <button  onClick = { () => nav('/payment') }><span style={{color:'black' , fontWeight:500 , fontSize:'14px' }}> Proceed to Checkout</span></button>
       
       </div>
 

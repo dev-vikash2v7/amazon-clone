@@ -34,14 +34,18 @@ function CheckOutProduct({product , hideRemove}) {
 
         <p className='checkoutProduct__price'>
             <span>Rs.</span>
-            <span>{product.price}</span>
+            <span style={{fontWeight:'600'}}>{product.price}</span>
         </p>
 
         <p className='checkoutProduct__rating'>
             {Array(product.rating).fill().map((e, i) => <Star key={i}/>)} 
         </p>
 
-{!hideRemove && <button className='product__remove_btn' onClick={reomve_from_basket}>Remove from basket</button>}
+{!hideRemove && <button className='product__remove_btn' onClick={reomve_from_basket}>
+  
+  <span style={{color:'black' , fontWeight:500 , fontSize:'14px' }}> Remove from basket </span>
+  </button>
+  }
 
     </div>
 

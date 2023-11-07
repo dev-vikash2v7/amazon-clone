@@ -1,71 +1,56 @@
-<a>https://amazing-prime-clone.web.app</a>
-# Getting Started with Create React App
+# Amazon-Clone Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This Amazon-clone is a full-stack e-commerce website created using the MERN Stack (MongoDB, Express, React, Node.js). It includes user authentication using Firebase, product ordering, and Stripe payment processing. The frontend is deployed on Netlify, and the backend server is hosted on Vercel.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User Authentication with Firebase
+- Product browsing, ordering, and cart functionality
+- Secure payment processing using Stripe
+- Full-stack MERN implementation
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- MongoDB: Database for product information and user data storage
+- Express: Backend server framework for handling requests
+- React: Frontend development for the user interface
+- Node.js: Runtime environment for server-side code
+- Firebase Authentication: Secure user authentication
+- Stripe API: Payment processing and transactions
+- Netlify: Frontend deployment
+- Vercel: Backend server deployment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deployment
 
-### `npm test`
+- Frontend: Deployed on Netlify - https://vk-amazon-clone.netlify.app/ 
+- Backend Server: Hosted on Vercel 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup Instructions
 
-### `npm run build`
+1. Clone the repository: `git clone https://github.com/your-username/amazon-clone.git`
+2. Navigate to the project directory: `cd amazon-clone`
+3. Install dependencies for both frontend and backend: `npm install`
+4. Set up environment variables:
+   - For Firebase and Stripe credentials
+   - Configure MongoDB connection strings
+5. Start the development server:
+   - Frontend: `npm start`
+   - Backend: `cd backend` then `npm start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Once the setup is complete, the website will be accessible locally. Users can register, browse products, add items to the cart, and complete transactions using the Stripe payment gateway.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+Contributions are welcome! Fork the repository, make changes, and submit pull requests for improvements or new features.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is licensed under MIT.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contact
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Portfolio: https://vkverma-portfolio.netlify.app
+- LinkedIn: https://www.linkedin.com/in/vikash-kverma/
+- Email: vikashvermacom92@gmail.com

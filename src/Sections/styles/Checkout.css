@@ -4,7 +4,6 @@
 background-color: white;
 padding-bottom: 40px;
 
-
 }
 
 .checkout__ad{
@@ -14,7 +13,16 @@ padding-bottom: 40px;
     margin-bottom: 10px;
 }
 
-
+.checkout_subtitle{
+  background-color: #fff;
+  border: 1px solid black;
+  margin-top: 20px;
+  width: fit-content;
+  height: fit-content;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: '6px';
+}
 
 
 .checkout__items{

@@ -20,7 +20,7 @@ function Orders() {
               .collection('users')
               .doc(user?.uid)
               .collection('orders')
-              .orderBy('created', 'desc')
+              .orderBy('created')
               .onSnapshot(snapshot => {
                 setOrders(snapshot.docs.map(doc => ({id: doc.id, data: doc.data()})))
                   })
@@ -36,11 +36,17 @@ function Orders() {
 
 
             {
+              orders.length !== 0 ? 
+
               orders.map(order => (
               <div className='orders__order'>
               <Order id={order.id} items = {order.data.basket} createdOn={order.data.created} amount = {order.data.amount} />
               </div>
             ))
+            :
+            <div style={{justifyContent:'center',alignItems:'center' , alignSelf:'center' , marginTop:20}}> 
+                <p style={{fontSize:24 , fontWeight:'600' , textAlign:'center'}}>No Orders created</p>
+            </div>
             }
 
         </div>
